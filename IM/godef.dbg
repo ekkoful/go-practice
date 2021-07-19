@@ -1,0 +1,165 @@
+ajNamGetValueC 'debugbuffer'
+ajNamGetValueC search for 'EMBOSS_DEBUGBUFFER': EMBOSS_DEBUGBUFFER not found
+Debug file godef.dbg buffered:No
+ajAcdInitPV pgm 'godef' package ''
+  version '6.6.0.0' system 'Linux'
+ajNamGetValueC 'acdroot'
+ajNamGetValueC search for 'EMBOSS_ACDROOT': Found environment variable value '/usr/share/EMBOSS/acd'
+ajFileNewInNameS '/usr/share/EMBOSS/acd/godef.acd'
+EOF ajFileGetsL file /usr/share/EMBOSS/acd/godef.acd
+ajNamGetValueC 'language'
+ajNamGetValueC search for 'EMBOSS_LANGUAGE': EMBOSS_LANGUAGE not found
+ajNamGetValueC 'acdroot'
+ajNamGetValueC search for 'EMBOSS_ACDROOT': Found environment variable value '/usr/share/EMBOSS/acd'
+ajFileNewInNameS '/usr/share/EMBOSS/acd/codes.english'
+EOF ajFileGetsL file /usr/share/EMBOSS/acd/codes.english
+ajNamGetValueC 'acdroot'
+ajNamGetValueC search for 'EMBOSS_ACDROOT': Found environment variable value '/usr/share/EMBOSS/acd'
+ajFileNewInNameS '/usr/share/EMBOSS/acd/knowntypes.standard'
+EOF ajFileGetsL file /usr/share/EMBOSS/acd/knowntypes.standard
+ajNamGetValueC 'timetoday'
+ajNamGetValueC search for 'EMBOSS_TIMETODAY': EMBOSS_TIMETODAY not found
+ajNamGetValueC 'auto'
+ajNamGetValueC search for 'EMBOSS_AUTO': EMBOSS_AUTO not found
+ajNamGetValueC 'stdout'
+ajNamGetValueC search for 'EMBOSS_STDOUT': EMBOSS_STDOUT not found
+ajNamGetValueC 'filter'
+ajNamGetValueC search for 'EMBOSS_FILTER': EMBOSS_FILTER not found
+ajNamGetValueC 'options'
+ajNamGetValueC search for 'EMBOSS_OPTIONS': EMBOSS_OPTIONS not found
+ajNamGetValueC 'debugbuffer'
+ajNamGetValueC search for 'EMBOSS_DEBUGBUFFER': EMBOSS_DEBUGBUFFER not found
+ajNamGetValueC 'verbose'
+ajNamGetValueC search for 'EMBOSS_VERBOSE': EMBOSS_VERBOSE not found
+ajNamGetValueC 'help'
+ajNamGetValueC search for 'EMBOSS_HELP': EMBOSS_HELP not found
+ajNamGetValueC 'warning'
+ajNamGetValueC search for 'EMBOSS_WARNING': EMBOSS_WARNING not found
+ajNamGetValueC 'error'
+ajNamGetValueC search for 'EMBOSS_ERROR': EMBOSS_ERROR not found
+ajNamGetValueC 'fatal'
+ajNamGetValueC search for 'EMBOSS_FATAL': EMBOSS_FATAL not found
+ajNamGetValueC 'die'
+ajNamGetValueC search for 'EMBOSS_DIE': EMBOSS_DIE not found
+ajNamGetValueC 'version'
+ajNamGetValueC search for 'EMBOSS_VERSION': EMBOSS_VERSION not found
+ajUserDumpS: Find GO ontology terms by definition
+ajNamGetValueC 'outdirectory'
+ajNamGetValueC search for 'EMBOSS_OUTDIRECTORY': EMBOSS_OUTDIRECTORY not found
+ajOboinClear called
+ajTextinClear called
+ajTextinClear called
+ajOboinRead: no file yet - test query 'go-des:main.go'
+oboinQryProcess 'go-des:main.go'
+++ajQuerystrParseFormat 'go-des:main.go'
+oboinQryProcess ... fmtstr '<null>' 'go-des:main.go'
+++ajQuerystrParseListfile 'go-des:main.go'
+oboinQryProcess ... no listfile 'go-des:main.go'
+ajQuerystrParseRead qry 'go-des:main.go' iquery '' ioffset '0' format: '' (0)
+query to test: 'go-des:main.go'
+
+server dbexp: No 'go-des:main.go'
+entry-id regexp: Yes
+filetest regexp queryRegFieldId: Yes 'go-des:main.go'
+queryRegFieldId 'go'
+queryDbfind db: 'go' svr: '<null>'
+regstat: Yes qry 'go-des:main.go' iquery '' queryDB: 'go' dbstat: Yes open: '' close: '' field: 'des' qryfields: 'main.go'
+found dbname 'go' level: 'des' qryfields: 'main.go'
+namInformatTest format 'obo' dbtype 'obo' namtype 'Obo'
+Query qryfields: 'main.go' open: '' close: '' inbraces: No
+database type: 'obo' format 'obo' 1 textformat 0 
+file Qry 'main.go' Field 'des' hasAcc:Yes queryChr '<null>'
+query processing: single field 'des' query 'main.go'
+ajNamDbQuery SetQuery:No QueryType:2
+namMethod2Qlinks method: 'emboss' datatype: 4 text: '|&!^='
+ajQueryKnownFieldC qry 'des' fields 'id;acc;nam;isa;des;ns'
+ajQueryKnownFieldC match 'des'
+ajQueryfieldNewS 'des' 'main.go'
+ajQueryAddFieldOrS.a 'des' 'main.go'
+ajQuerySetWild fields: 1
+test1 query des 'main.go' 0
+test2 query des 'main.go'
+wildcard in stored query: Yes
+  Query Trace
+    DbName: 'go'
+    DbType: 'obo' (2)
+    des: 'main.go' 0 (init)
+    Case-sensitive Id: 'No'
+   Has accession: Yes
+    Method: 'emboss'
+    Formatstr: 'obo'
+    IndexDir: '/usr/share/EMBOSS/index'
+    Directory: '/usr/share/EMBOSS/data/OBO'
+    DbFields: 'id;acc;nam;isa;des;ns'
+    SingleField: 'des'
+    QryString: 'go-des:main.go'
+    QryFields: 'main.go'
+   Fpos: 0
+   QryDone: No
+   Wildcard in query: No
+try TEXT access by method 'emboss'
+textAccessEmboss type 2 Single:No Count:0 Multi:No QryData:0
+ajFileNewInNameS '/usr/share/EMBOSS/index/go.pxid'
+EOF ajFileGetsL file /usr/share/EMBOSS/index/go.pxid
+ajFileNewInNameS '/usr/share/EMBOSS/index/go.ent'
+EOF ajFileGetsL file /usr/share/EMBOSS/index/go.ent
+ajFileNewInNameS '/usr/share/EMBOSS/index/go.pxde'
+EOF ajFileGetsL file /usr/share/EMBOSS/index/go.pxde
+directory '/usr/share/EMBOSS/index' query: 'des:main.go'
+textEmbossQryQuery wild: No list:0 fields:1
+field 'des' query: 'main.go'
+ajBtreeKeyFetchHit 'main.go'
+ajBtreeKeyFindLen 'main.go'
+EMBOSS B+tree Query failed 'des:main.go'
+B+tree Query success
+textEmbossQryClose clean up qryd
+textAccessEmboss db: 'go' returns: No
+Database 'go' : access method 'emboss' failed
+ajErr: Error: No matching terms
+ajOboinDel called qry:'go-des:main.go'
+ajTextinDel called qry:'go-des:main.go' filebuff: 0
+ajQueryDel db:'go' svr: '' fields:1
+textAccessFreeEmboss
+textEmbossQryClose clean up qryd
+ajNamGetValueC 'timetoday'
+ajNamGetValueC search for 'EMBOSS_TIMETODAY': EMBOSS_TIMETODAY not found
+ajNamGetValueC 'logfile'
+ajNamGetValueC search for 'EMBOSS_LOGFILE': EMBOSS_LOGFILE not found
+ajNamGetValueC 'acdcommandlinelog'
+ajNamGetValueC search for 'EMBOSS_ACDCOMMANDLINELOG': EMBOSS_ACDCOMMANDLINELOG not found
+
+Final Summary
+=============
+
+ajBtreeExit
+sync calls: 0 Lock:0 Write: 0
+Rootsync calls: 0 Lock:0 (max 0) Unlock: 0 (max 0)
+   statSaveIdbucketNext: 0
+   statSaveIdbucketEmptyNext: 0
+   statSavePribucketNext: 0
+   statSavePribucketEmptyNext: 0
+   statSaveSecbucketNext: 0
+   statSaveSecbucketEmptyNext: 0
+   statSaveNumbucketNext: 0
+   statSaveSecIdNext: 0
+   statSaveBtreeIdNext: 0
+   statSaveBtreeHitrefNext: 0
+   statSaveBtreeHitNext: 0
+   statSaveBtreePriNext: 0
+Primary Arrays: New:0 Reuse:0 Delete:0 Free:0
+Secondary Arrays: New:0 Reuse:0 Delete:0 Free:0
+Split root:0 Sec:0 Hyb:0 Num:0
+Split leaf: Pri:0 Sec:0 Id:0 Num:0
+Split reorder:0 Pri:0 Sec:0  Id:0 Num:0
+Tree usage : 0 opened, 0 closed, 0 maxsize 0 nodes
+Tree iterator usage : 0 opened, 0 closed
+ajNamExit done
+Regexp usage (bytes): 192 allocated, 1104 freed, -912 in use (sizes change)
+Regexp usage (number): 24 allocated, 23 freed 1 in use
+Array usage (bytes): 0 allocated, 0 freed, 0 in use
+Array usage (number): 0 allocated, 0 freed, 0 resized, 0 in use
+Array usage 2D (bytes): 0 allocated, 0 freed, 0 in use
+Array usage 2D (number): 0 allocated, 0 freed, 0 resized, 0 in use
+Array usage 3D (bytes): 0 allocated, 0 freed, 0 in use
+Array usage 3D (number): 0 allocated, 0 freed, 0 resized, 0 in use
+File usage : 1 opened, 8 closed, 3 max, 9 total
