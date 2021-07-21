@@ -55,11 +55,42 @@ func (list *List) Append(data Elem) *Node {
 func (list *List) ShowList() {
 	if !list.IsEmpty() {
 		cur := list.headNode
+		// 只要当前Node不为空，就进行遍历
 		for cur != nil {
 			fmt.Println(cur.Data)
 			cur = cur.Next
 		}
 	}
+}
+
+func (list *List) Length() int {
+	cur := list.headNode
+	count := 0
+	for cur != nil {
+		count++
+		cur = cur.Next
+	}
+	return count
+}
+
+func (list *List) Insert(pos int, data Elem) {
+
+}
+
+func (list *List) SearchByIndex() Elem {
+
+}
+
+func (list *List) SearchByValue() bool {
+
+}
+
+func (list *List) RemoveByIndex() {
+
+}
+
+func (list *List) RemoveByValue() {
+
 }
 
 func main() {
@@ -68,4 +99,5 @@ func main() {
 	l.Add(1)
 	l.Append(2)
 	l.ShowList()
+	fmt.Println(l.Length())
 }
