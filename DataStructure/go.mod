@@ -1,3 +1,3 @@
-module linkedList
+module DataStruct
 
 go 1.16

@@ -73,8 +73,27 @@ func (list *List) Length() int {
 	return count
 }
 
-func (list *List) Insert(pos int, data Elem) {
-
+//在链表指定位置前插入元素
+func (list *List) Insert(index int, data Elem) {
+	//如果index < 0, 则进头部插入
+	if index < 0 {
+		list.Add(data)
+	} else if index > list.Length() { //如果index大于链表长度，进行尾部插入
+		list.Append(data)
+	} else {
+		pre := list.headNode
+		count := 0
+		for count < (index - 1) { //用于控制位移的链表数目
+			count++
+			pre = pre.Next
+		}
+		// 当循环退出后，pre指向index-1的位置
+		node := &Node{
+			Data: data,
+		}
+		node.Next = pre.Next
+		pre.Next = node
+	}
 }
 
 func (list *List) SearchByIndex() Elem {
