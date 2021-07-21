@@ -1,4 +1,8 @@
-package linkedList
+package main
+
+import (
+	"fmt"
+)
 
 type Elem interface{}
 
@@ -11,19 +15,14 @@ type List struct {
 	headNode *Node
 }
 
-func (list *List) New() {
-	return &List{
-		headNode: &Node{
-			Data: nil,
-			Next: *Node,
-		},
-	}
+func New() *List {
+	return &List{}
 }
 
 func (list *List) IsEmpty() bool {
 	if list.headNode == nil {
-		return true 
-	} else if {
+		return true
+	} else {
 		return false
 	}
 }
@@ -43,15 +42,30 @@ func (list *List) Append(data Elem) *Node {
 	}
 	if list.IsEmpty() {
 		list.headNode = node
-	} else if {
-		curr := list.headNode
-		for curr.Next != nil {
-			curr = curr.Next
+	} else {
+		cur := list.headNode
+		for cur.Next != nil {
+			cur = cur.Next
 		}
-		curr.Next = Node
+		cur.Next = node
+	}
+	return node
+}
+
+func (list *List) ShowList() {
+	if !list.IsEmpty() {
+		cur := list.headNode
+		for cur != nil {
+			fmt.Println(cur.Data)
+			cur = cur.Next
+		}
 	}
 }
 
 func main() {
-	l = linkedList.New()
+	l := New()
+	fmt.Println(l.IsEmpty())
+	l.Add(1)
+	l.Append(2)
+	l.ShowList()
 }
