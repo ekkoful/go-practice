@@ -96,20 +96,60 @@ func (list *List) Insert(index int, data Elem) {
 	}
 }
 
-func (list *List) SearchByIndex() Elem {
-
+func (list *List) SearchByIndex(index int) Elem {
+	if index <= 0 {
+		return nil
+	} else if index > list.Length() {
+		return nil
+	} else {
+		cur := list.headNode
+		count := 0
+		for count < (index - 1) {
+			count++
+			cur = cur.Next
+		}
+		return cur.Data
+	}
 }
 
-func (list *List) SearchByValue() bool {
-
+func (list *List) SearchByValue(data Elem) bool {
+	cur := list.headNode
+	for cur != nil {
+		if cur.Data == data {
+			return true
+		}
+		cur = cur.Next
+	}
+	return false
 }
 
-func (list *List) RemoveByIndex() {
-
+func (list *List) RemoveByIndex(index int) bool {
+	if index <= 0 {
+		return false
+	} else if index > list.Length() {
+		return false
+	} else {
+		cur := list.headNode
+		count := 1
+		for count < (index - 1) {
+			count++
+			cur = cur.Next
+		}
+		cur.Next = cur.Next.Next
+		return false
+	}
 }
 
-func (list *List) RemoveByValue() {
-
+func (list *List) RemoveByValue(data Elem) bool {
+	cur := list.headNode
+	for cur != nil {
+		if cur.Data == data {
+			cur.Next = cur.Next.Next
+			return true
+		}
+		cur = cur.Next
+	}
+	return false
 }
 
 func main() {
@@ -117,6 +157,16 @@ func main() {
 	fmt.Println(l.IsEmpty())
 	l.Add(1)
 	l.Append(2)
+	l.Append(3)
+	l.Append(4)
+	l.Append(5)
+	l.Append(6)
 	l.ShowList()
 	fmt.Println(l.Length())
+	fmt.Println(l.SearchByIndex(3))
+	fmt.Println(l.SearchByValue(1))
+	fmt.Println(l.RemoveByIndex(2))
+	l.ShowList()
+	fmt.Println(l.RemoveByValue(5))
+	l.ShowList()
 }
