@@ -1,4 +1,4 @@
-package main
+package DataStructure
 
 import (
 	"fmt"
@@ -152,7 +152,7 @@ func (list *List) RemoveByValue(data Elem) bool {
 	return false
 }
 
-func main() {
+/*func main() {
 	l := New()
 	fmt.Println(l.IsEmpty())
 	l.Add(1)
@@ -169,4 +169,4 @@ func main() {
 	l.ShowList()
 	fmt.Println(l.RemoveByValue(5))
 	l.ShowList()
-}
+} */
