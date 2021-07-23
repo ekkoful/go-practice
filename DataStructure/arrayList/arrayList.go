@@ -5,6 +5,8 @@ type ArrayList struct {
 	Size    int
 }
 
-func New() *ArrayList {
+func New(values ...interface{}) *ArrayList {
+	list := &ArrayList{}
+	list.Element = make([]interface{}, 10)
 
 }
