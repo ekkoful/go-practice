@@ -69,6 +69,68 @@ func (list *ArrayList) Contains(values ...interface{}) bool {
 	return true
 }
 
+// Values returns all elements in the list
+func (list *ArrayList) Values() []interface{} {
+	newElements := make([]interface{}, list.size)
+	copy(newElements, list.elements[:list.size])
+	return newElements
+}
+
+func (list *ArrayList) IndexOf(value interface{}) int {
+	if list.size == 0 {
+		return -1
+	}
+	for index, element := range list.elements {
+		if element == value {
+			return index
+		}
+	}
+	return -1
+}
+
+func (list *ArrayList) IsEmpty() bool {
+	return list.size == 0
+}
+
+func (list *ArrayList) Size() int {
+	return list.size
+}
+
+func (list *ArrayList) Clear() {
+	list.size = 0
+	list.elements = []interface{}{}
+}
+
+func (list *ArrayList) Insert(index int, values ...interface{}) {
+
+	if !list.withinRange(index) {
+		//append
+		if index == list.size {
+			list.Add(values...)
+		}
+		return
+	}
+
+	l := len(values)
+	list.growBy(l)
+	list.size += l
+	copy(list.elements[index+l:], list.elements[index:list.size-l])
+	copy(list.elements[index:], values)
+}
+
+func (list *ArrayList) Set(index int, value interface{}) {
+
+	if !list.withinRange(index) {
+		//append
+		if index == list.size {
+			list.Add(value)
+		}
+		return
+	}
+
+	list.elements[index] = value
+}
+
 func (list *ArrayList) withinRange(index int) bool {
 	return index >= 0 && index < list.size
 }
