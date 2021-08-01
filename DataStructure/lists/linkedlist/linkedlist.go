@@ -37,7 +37,7 @@ func (list *List) Add(data Elem) *Node {
 }
 
 func (list *List) Append(data Elem) *Node {
-	node := &Node{
+	var node = &Node{
 		Data: data,
 	}
 	if list.IsEmpty() {
@@ -170,3 +170,5 @@ func (list *List) RemoveByValue(data Elem) bool {
 	fmt.Println(l.RemoveByValue(5))
 	l.ShowList()
 } */
+
+//
