@@ -46,5 +46,6 @@ func Parse(dest interface{}, d dialect.Dialect) *Schema {
 			schema.fieldMap[p.Name] = field
 		}
 	}
-	return
+
+	return schema
 }
