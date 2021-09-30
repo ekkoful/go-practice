@@ -2,19 +2,22 @@ package session
 
 import (
 	"database/sql"
+	"dialect"
 	"ekkorm/log"
 	"strings"
 )
 
 type Session struct {
 	db      *sql.DB
+	dialect dialect.Dialect
 	sql     strings.Builder
 	sqlVars []interface{}
 }
 
-func New(db *sql.DB) *Session {
+func New(db *sql.DB, dialect dialect.Dialect) *Session {
 	return &Session{
 		db: db,
+		dialect: dialect,
 	}
 }
 
