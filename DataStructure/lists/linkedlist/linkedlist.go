@@ -151,24 +151,3 @@ func (list *List) RemoveByValue(data Elem) bool {
 	}
 	return false
 }
-
-/*func main() {
-	l := New()
-	fmt.Println(l.IsEmpty())
-	l.Add(1)
-	l.Append(2)
-	l.Append(3)
-	l.Append(4)
-	l.Append(5)
-	l.Append(6)
-	l.ShowList()
-	fmt.Println(l.Length())
-	fmt.Println(l.SearchByIndex(3))
-	fmt.Println(l.SearchByValue(1))
-	fmt.Println(l.RemoveByIndex(2))
-	l.ShowList()
-	fmt.Println(l.RemoveByValue(5))
-	l.ShowList()
-} */
-
-//
