@@ -73,7 +73,7 @@ func (list *List) Length() int {
 	return count
 }
 
-//在链表指定位置前插入元素
+// Insert the elem before the index
 func (list *List) Insert(index int, data Elem) {
 	//如果index < 0, 则进头部插入
 	if index < 0 {

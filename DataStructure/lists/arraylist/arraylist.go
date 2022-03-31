@@ -6,17 +6,15 @@ type ArrayList struct {
 }
 
 const (
-	GROWTH_FACTOR = float32(2.0)
-	//shrinkFactor = float32(0.25)
-	SHRINK_FACTOR = float32(0.25)
+	GrowthFactor = float32(2.0)
+	ShrinkFactor = float32(0.25)
 )
 
 func New(values ...interface{}) *ArrayList {
 
 	list := &ArrayList{}
-	//list.Element = make([]interface{}, 10)
 	if len(values) > 0 {
-		list.Add(values)
+		list.Add(values...)
 	}
 
 	return list
@@ -144,18 +142,18 @@ func (list *ArrayList) resize(cap int) {
 func (list *ArrayList) growBy(n int) {
 	currentCapacity := cap(list.elements)
 	if list.size+n >= currentCapacity {
-		newCapacity := int(GROWTH_FACTOR * float32(currentCapacity+n))
+		newCapacity := int(GrowthFactor * float32(currentCapacity+n))
 		list.resize(newCapacity)
 	}
 }
 
 func (list *ArrayList) shrink() {
 
-	if SHRINK_FACTOR == 0.0 {
+	if ShrinkFactor == 0.0 {
 		return
 	}
 	currentCapacity := cap(list.elements)
-	if list.size <= int(SHRINK_FACTOR*float32(currentCapacity)) {
+	if list.size <= int(ShrinkFactor*float32(currentCapacity)) {
 		list.resize(list.size)
 	}
 }
