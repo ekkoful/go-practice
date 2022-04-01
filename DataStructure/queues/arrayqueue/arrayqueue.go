@@ -16,10 +16,19 @@ func New() *Queue {
 	}
 }
 
-func (q *Queue) Enqueue(value ...interface{}) {
-	q.list.Add(value...)
+func (q *Queue) Enqueue(value interface{}) {
+	q.list.Add(value)
+	q.tail++
 }
 
-func (q *Queue) Dequeue() {
-	q.list.Remove(q.head)
+func (q *Queue) Dequeue() interface{} {
+	if q.head == q.tail {
+		return nil
+	}
+	value, ok := q.list.Get(q.head)
+	if !ok {
+		return nil
+	}
+	q.head++
+	return value
 }

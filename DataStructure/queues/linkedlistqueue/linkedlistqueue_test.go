@@ -1,8 +1,6 @@
-package arrayqueue
+package linkedlistqueue
 
-import (
-	"testing"
-)
+import "testing"
 
 func TestQueue_Enqueue(t *testing.T) {
 	queue := New()

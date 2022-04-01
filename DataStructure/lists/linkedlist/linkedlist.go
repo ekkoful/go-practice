@@ -97,14 +97,14 @@ func (list *List) Insert(index int, data Elem) {
 }
 
 func (list *List) SearchByIndex(index int) Elem {
-	if index <= 0 {
+	if index < 0 {
 		return nil
 	} else if index > list.Length() {
 		return nil
 	} else {
 		cur := list.headNode
 		count := 0
-		for count < (index - 1) {
+		for count < index {
 			count++
 			cur = cur.Next
 		}
